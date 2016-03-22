@@ -7,16 +7,9 @@ The result of this effort is my [user-customizations.el]() file, which is used i
 
 The only other artifact is a [lein project file]() that is needed to ensure that the plugins run smoothly together.
 
-
-
-## Windows Specific issues
-In the process of getting documentation and navigate to code to work, CIDER reported errors about not being able to find libraries, so having resolved those issues, I wanted to document them in case I encounter them again in the future.
-
 * [zlib](http://zlib.net/)
   * Download zlib1.dll binary (64 bit!)
   * Place the binary in the same directory as emacs.exe
 * [unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)
   * Download the binaries
   * Add an environment variable to include the directory where you download the binaries to
-
-
