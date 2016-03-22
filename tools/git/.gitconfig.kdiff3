@@ -1,0 +1,22 @@
+[user]
+    email = tomjkidd@gmail.com
+    name = Tom Kidd
+[core]
+    autocrlf = true
+    excludesfile = C:\\Users\\tkidd\\Documents\\gitignore_global.txt
+[push]
+    default = matching
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    cmd = \"/c/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    cmd = \"/c/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+[mergetool]
+    keepBackup = false
