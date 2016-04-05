@@ -8,6 +8,18 @@
 ;; opening a clojure file.
 ;; http://emacs.stackexchange.com/questions/8174/where-do-dlls-go-for-emacs-24-4-1-on-windows-7/8179#8179?newreg=0f8020b65db74f0fa3c4553f7919e1e1
 
+;; Allow find to work on windows
+(defadvice shell-quote-argument (after windows-nt-special-quote (argument) activate)
+     "Add special quotes to ARGUMENT in case the system type is 'windows-nt."
+     (when
+         (and (eq system-type 'windows-nt) (w32-shell-dos-semantics))
+       (if (string-match "[\\.~]" ad-return-value)
+           (setq ad-return-value
+               (replace-regexp-in-string
+                "\\([\\.~]\\)"
+                "\\\\\\1"
+                ad-return-value)))))
+
 ;; Load desired theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'monokai t)
@@ -145,6 +157,28 @@
   (untabify (region-beginning) (region-end))
   (keyboard-quit))
 
+(require 'clojure-mode)
+
+(define-clojure-indent
+  (defroutes 'defun)
+  (GET 2)
+  (POST 2)
+  (PUT 2)
+  (DELETE 2)
+  (HEAD 2)
+  (ANY 2)
+  (context 2))
+
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+    (clj-refactor-mode 1)
+    (yas-minor-mode 1) ; for adding require/use/import statements
+    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+    (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
 ;; fix weird os x kill error
 (defun ns-get-pasteboard ()
   "Returns the value of the pasteboard, or nil for unsupported formats."
@@ -277,3 +311,20 @@
 (global-set-key (kbd "C-9") '(lambda()(interactive)(tk-opacity-modify t)))
 (global-set-key (kbd "C-0") '(lambda()(interactive)
                                (modify-frame-parameters nil `((alpha . 100)))))
+
+;; Prevent cider from injecting dependencies because this causes problems on my windows machine
+(setq cider-inject-dependencies-at-jack-in nil)
+
+;; Move between visible buffers
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+
+;; Move between other windows
+(global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-,") 'prev-window)
+
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
