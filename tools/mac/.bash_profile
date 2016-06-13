@@ -27,3 +27,5 @@ alias et='emacsclient -t'
 
 alias reloadprof='source ~/.bash_profile'
 alias soe='cd ~/github/haskell-soe'
+alias excerpts='cd ~/github/excerpts'
+alias h='cd ~'

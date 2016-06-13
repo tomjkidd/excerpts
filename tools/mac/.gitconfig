@@ -1,0 +1,18 @@
+[core]
+	editor = emacsclient -t
+[diff]
+	tool = kdiff3
+[merge]
+	tool = kdiff3
+[user]
+	email = tomjkidd@gmail.com
+	name = Tom Kidd
+[mergetool]
+	keepBackup = false
+[alias]
+	l = log --oneline --graph --all
+	lo = log --oneline
+	unstage = reset HEAD --
+	dt = difftool
+	mt = mergetool
+	last = log -1 HEAD
