@@ -60,3 +60,7 @@
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
+
+;; Jump to home/end of buffer
+(global-set-key (kbd "C-,") 'beginning-of-buffer)
+(global-set-key (kbd "C-.") 'end-of-buffer)
