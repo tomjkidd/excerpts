@@ -30,3 +30,8 @@ alias soe='cd ~/github/haskell-soe'
 alias excerpts='cd ~/github/excerpts'
 alias h='cd ~'
 alias cljexec='lein exec'
+
+# Used to download template for use in scripting
+# Usage: cljcli > [scriptname].clj
+# Then run with cljexec [scriptname].cli [arg1] [arg2] ...
+alias cljcli='curl -fsSL https://raw.githubusercontent.com/tomjkidd/excerpts/master/tools/clojure/cli-template.clj'
