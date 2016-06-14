@@ -1,4 +1,5 @@
 #! /bin/sh lein exec
+; -*- Clojure -*-
 
 (require 'leiningen.exec)
 
