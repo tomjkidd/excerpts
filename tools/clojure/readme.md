@@ -4,7 +4,7 @@ To collect some useful clojure code I've written
 
 # Scripts
 
-[clj-template.clj](./clj-template.clj) is a template that can be downloaded
+[cli-template.clj](./cli-template.clj) is a template that can be downloaded
 as a starting point to create a clojure script. Note that in this context,
 a script is a clojure program that runs outside of a lein project as a
 command line executable.
