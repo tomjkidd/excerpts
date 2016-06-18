@@ -35,3 +35,6 @@ alias cljexec='lein exec'
 # Usage: cljcli > [scriptname].clj
 # Then run with cljexec [scriptname].cli [arg1] [arg2] ...
 alias cljcli='curl -fsSL https://raw.githubusercontent.com/tomjkidd/excerpts/master/tools/clojure/cli-template.clj'
+
+alias cljgroup='open -a Google\ Chrome http://groups.google.com/forum/\#\!forum/clojure'
+alias elmgroup='open -a Google\ Chrome https://groups.google.com/forum/\#\!forum/elm-discuss'
