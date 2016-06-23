@@ -3,7 +3,7 @@
 ```shell
 elm-package diff
 elm-package bump
-git add packages.json
+git add elm-package.json
 git commit -m "Release X.Y.X"
 git push
 git tag -a 1.1.1 -m "Release X.Y.Z"
