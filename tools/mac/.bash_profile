@@ -23,11 +23,16 @@ alias grm='git rm'
 alias grmr='git rm -r'
 alias gs='git status'
 alias gua='git reset HEAD --'
+alias gchangedc='git diff-tree --no-commit-id --name-only -r'
+alias gchanged='gchangedc HEAD'
+alias gshow='git show' # Note, HEAD@{N} can be used to back trace head
+alias gshow2='git diff HEAD^ HEAD' # Note, COMMIT^ COMMIT can be used for any commit's diff from it's predecesor
 alias et='emacsclient -t'
 
 alias reloadprof='source ~/.bash_profile'
 alias soe='cd ~/github/haskell-soe'
 alias excerpts='cd ~/github/excerpts'
+alias blabber='cd ~/blabberize/repo/carbon-tiger'
 alias h='cd ~'
 alias cljexec='lein exec'
 
@@ -38,3 +43,19 @@ alias cljcli='curl -fsSL https://raw.githubusercontent.com/tomjkidd/excerpts/mas
 
 alias cljgroup='open -a Google\ Chrome http://groups.google.com/forum/\#\!forum/clojure'
 alias elmgroup='open -a Google\ Chrome https://groups.google.com/forum/\#\!forum/elm-discuss'
+
+PATH=$PATH:~/bin
+
+# Use --new-window as an arg, default behavior is to open in current tab
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias chr='chrome'
+alias chrcljs='chrome --new-window https://developer.mozilla.org/en-US/docs/Web/API http://cljs.info/cheatsheet/ http://localhost:8887/'
+alias chrclj='chrome --new-window http://clojuredocs.org/'
+alias chrelm='chrome http://package.elm-lang.org/packages/elm-lang/core/4.0.1/ http://package.elm-lang.org/'
+alias chrnews='chrome --new-window https://news.ycombinator.com/ https://news.google.com/ http://groups.google.com/forum/\#\!forum/clojure https://groups.google.com/forum/\#\!forum/elm-discuss '
+
+# Terminal colors
+# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# export CLICOLOR=1
+# export LSCOLORS=ExFxBxDxCxegedabagacad
+# alias ls='ls -GFh'
