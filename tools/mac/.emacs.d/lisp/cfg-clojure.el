@@ -24,3 +24,5 @@
 
 (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
 (add-to-list 'interpreter-mode-alist '("sh lein exec" . clojure-mode))
+
+(require-package 'clojure-cheatsheet)

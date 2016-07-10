@@ -4,15 +4,6 @@
                   (interactive)
                   (find-file-other-window "~/.emacs.d/lisp/user-customizations.el")))
 
-(require-package 'f)
-(require-package 's)
-(require-package 'elm-mode)
-
-(require-package 'which-key)
-(which-key-mode)
-
-(require-package 'clojure-cheatsheet)
-
 (setq-default
  whitespace-line-column 72
  whitespace-style       '(face lines-tail))
@@ -35,4 +26,10 @@
 ;(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 ;                                                                     (global-fci-mode 1)
 
-
+; USEFUL COMMANDS
+; C-h f | look up function definition
+; M-x query-replace | find and replace
+; C-x C-e | Evaluate emacs lisp
+; C-h m | Show all keybindings
+; C-c C-f | Elm Mode, format current file
+; C-c C-c | Haskell mode, compile current file

@@ -10,6 +10,7 @@ alias gch='git checkout'
 alias gchm='git checkout master'
 alias gclr='git checkout -- .'
 alias gdt='git difftool'
+alias gdtt='gdt -t'
 alias gl='git log'
 alias glo='git log --oneline'
 alias glog='git log --oneline --graph'
@@ -49,13 +50,22 @@ PATH=$PATH:~/bin
 # Use --new-window as an arg, default behavior is to open in current tab
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias chr='chrome'
-alias chrcljs='chrome --new-window https://developer.mozilla.org/en-US/docs/Web/API http://cljs.info/cheatsheet/ http://localhost:8887/'
-alias chrclj='chrome --new-window http://clojuredocs.org/'
+alias chrcljs='chrome --new-window https://developer.mozilla.org/en-US/docs/Web/API http://cljs.info/cheatsheet/ https://github.com/google/closure-library/tree/master/closure/goog https://clojurians.slack.com/messages/clojurescript/ https://developers.google.com/closure/library/ http://localhost:8887/'
+alias chrclj='chrome --new-window http://clojuredocs.org/ https://docs.oracle.com/javase/8/docs/api/'
 alias chrelm='chrome http://package.elm-lang.org/packages/elm-lang/core/4.0.1/ http://package.elm-lang.org/'
-alias chrnews='chrome --new-window https://news.ycombinator.com/ https://news.google.com/ http://groups.google.com/forum/\#\!forum/clojure https://groups.google.com/forum/\#\!forum/elm-discuss '
+alias chrnews='chrome --new-window https://news.ycombinator.com/ https://news.google.com/ http://groups.google.com/forum/\#\!forum/clojure https://groups.google.com/forum/\#\!forum/elm-discuss http://blog.cognitect.com/'
+
+
+# Default MAC PS1
+#export PS1="\h:\W \u\$"
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="\[\033[93m\]\W\[\033[m\] $ "
 
 # Terminal colors
-# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-# export CLICOLOR=1
+export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 # alias ls='ls -GFh'
+
+alias cpdir='cp -'
+# Use with dir1/. dir2/

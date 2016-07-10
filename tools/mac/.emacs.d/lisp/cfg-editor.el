@@ -50,6 +50,10 @@
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Helpful display of available command for what you've chorded so far
+(require-package 'which-key)
+(which-key-mode)
+
 ;; Highlight current line
 ;;(global-hl-line-mode 1)
 
@@ -57,3 +61,10 @@
 ;;(setq-default frame-title-format "%b (%f)")
 
 (setq electric-indent-mode nil)
+
+; CODE FOLDING
+(add-hook 'prog-mode-hook 'hs-minor-mode)
+(global-set-key (kbd "s-<up>") 'hs-hide-level)
+(global-set-key (kbd "s-<left>") 'hs-toggle-hiding)
+(global-set-key (kbd "s-<right>") 'hs-toggle-hiding)
+(global-set-key (kbd "s-<down>") 'hs-show-all)
