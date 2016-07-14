@@ -11,7 +11,7 @@
 
 ;; Show line numbers
 (global-linum-mode)
-
+(setq column-number-mode t)
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
 (when (fboundp 'tool-bar-mode)
@@ -61,6 +61,17 @@
 ;;(setq-default frame-title-format "%b (%f)")
 
 (setq electric-indent-mode nil)
+
+;; Unbind the window minimizing behavior (suspend-frame)
+(global-unset-key (kbd "C-z"))
+
+; Faces are responsible for colors and fonts, this will identify the one being
+; used at the current cursor position.y
+(defun what-face (pos)
+  (interactive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+                  (get-char-property (point) 'face))))
+    (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
 ; CODE FOLDING
 (add-hook 'prog-mode-hook 'hs-minor-mode)

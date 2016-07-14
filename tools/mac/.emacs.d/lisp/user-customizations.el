@@ -28,8 +28,18 @@
 
 ; USEFUL COMMANDS
 ; C-h f | look up function definition
+; C-h v | look up variable definition
 ; M-x query-replace | find and replace
 ; C-x C-e | Evaluate emacs lisp
 ; C-h m | Show all keybindings
 ; C-c C-f | Elm Mode, format current file
 ; C-c C-c | Haskell mode, compile current file
+; C-x h | Select entire buffer (select all), mark-whole-buffer
+; s-a | On the mac, command all works
+; s-z | On the mac, bound to undo
+; C-DEL | word backspace, backward-kill-word
+; C-u C-M-x | Cider Debug, this will 'instrument' the top-level expression
+;           | Optionally, insert #break in code to create breakpoints
+;           | Use C-c C-e or the repl to evaluate
+;           | n: next c: continue i: step-in o: step-out q: quit
+;           | Use C-M-x to stop debugging the marked expression

@@ -62,5 +62,34 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 ;; Jump to home/end of buffer
-(global-set-key (kbd "C-,") 'beginning-of-buffer)
-(global-set-key (kbd "C-.") 'end-of-buffer)
+;(global-set-key (kbd "C-,") 'beginning-of-buffer)
+;(global-set-key (kbd "C-.") 'end-of-buffer)
+
+;; These can be removed if they become clutter...
+;; next-code-buffer and previous-code-buffer serve the same purpose, better.
+;(global-set-key (kbd "<C-tab>") 'bury-buffer)
+;(global-set-key (kbd "C-`") 'unbury-buffer)
+
+;; Cycle the current buffer between non-* buffers
+(defun next-code-buffer ()
+  (interactive)
+  (let (( bread-crumb (buffer-name) ))
+    (next-buffer)
+    (while
+        (and
+         (string-match-p "^\*" (buffer-name))
+         (not ( equal bread-crumb (buffer-name) )) )
+      (next-buffer))))
+
+(defun previous-code-buffer ()
+  (interactive)
+  (let (( bread-crumb (buffer-name) ))
+    (previous-buffer)
+    (while
+        (and
+         (string-match-p "^\*" (buffer-name))
+         (not ( equal bread-crumb (buffer-name) )) )
+      (previous-buffer))))
+
+(global-set-key (kbd "<C-tab>") 'next-code-buffer)
+(global-set-key (kbd "C-`") 'previous-code-buffer)
