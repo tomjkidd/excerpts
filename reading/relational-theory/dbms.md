@@ -14,6 +14,12 @@ I've been pursuing knowledge in the domain of relational theory with a goal of u
 
 [Datomic queries](http://docs.datomic.com/query.html)
 
+[Hitchhiker Tree](https://github.com/datacrypt-project/hitchhiker-tree)
+
+[Hitchhiker Trees Video](https://www.youtube.com/watch?v=jdn617M3-P4)
+
+[Introduction to Algorithms(CLRS)](https://github.com/datacrypt-project/hitchhiker-tree)
+
 ## From Derek
 
 [A General Purpose Log Structured Merge Tree](http://www.eecs.harvard.edu/~margo/cs165/papers/gp-lsm.pdf)
@@ -31,10 +37,20 @@ Logical Database -> DBMS -> Physical Database
 
 ## Out of the Tar Pit
 
-Essential State: Base relvars
-Essential Logic: Business Logic functions and Internal/External Derived Relations
-Accidental State and Control: performance hints for caching, denormalization, and blob/variable length attribute storage
+* Essential State: Base relvars
+* Essential Logic: Business Logic functions and Internal/External Derived Relations
+* Accidental State and Control: performance hints for caching, denormalization, and blob/variable length attribute storage
 
 [Kow79](https://www.doc.ic.ac.uk/~rak/papers/algorithm%20=%20logic%20+%20control.pdf)
 
 [Mer85, behind paywall](http://link.springer.com/chapter/10.1007%2F978-3-642-61556-6_12#page-1)
+
+## Hitchhiker Trees
+
+* Binary Tree
+* B Tree
+* B+ Tree: Index and Data nodes
+* Fractal Tree: Index and Data nodes, buffer. Update in place
+* Hitchhiker Tree: Index and Data nodes, buffer. Path copying
+
+Block size: 4kB to 1MB
