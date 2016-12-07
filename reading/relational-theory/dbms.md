@@ -54,6 +54,51 @@ I've been pursuing knowledge in the domain of relational theory with a goal of u
 
 [Fully Persistent B-Trees](http://www.cs.au.dk/~gerth/papers/soda12.pdf)
 
+[What Goes Around Comes Around](https://mitpress.mit.edu/sites/default/files/titles/content/9780262693141_sch_0001.pdf)
+* Readable historical account of the different models that have been used to work with information systems.
+* Useful lessons from each epoch
+* Postgres figured out the engine mechanisms to support user-defined data types, operators, functions, and access methods.
+* Predicted the downfall of xml due to being overly complex.
+
+[Architecture of a Database System](http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf)
+
+[The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles](https://epub.ub.uni-muenchen.de/4256/1/31.pdf)
+
+[An Evaluation of Buffer Management Strategies for Relational Database Systems](http://www.csd.uoc.gr/~hy460/pdf/DBBufMgmt.pdf)
+
+[Join Processing in Database Systems with Large Main Memories](http://www.cs.ucr.edu/~tsotras/cs236/W15/join.pdf)
+
+[Access Path Selection in a Relational Database Management System](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.5879&rep=rep1&type=pdf)
+
+[Statistical Profile Estimation in Database Systems](https://pdfs.semanticscholar.org/cd08/9cd779e1958aac9e127eaf5f9da71f95dedd.pdf)
+
+[Concurrency Control and Recovery](http://db.csail.mit.edu/6.830/lectures/franklin97concurrency.pdf)
+
+[ARIES Write Ahead Logging](http://cs.stanford.edu/people/chrismre/cs345/rl/aries.pdf)
+
+[Granularity of Locks and Degrees of Consistency in a Shared Data Base](http://citeseer.ist.psu.edu/viewdoc/download?doi=10.1.1.92.8248&rep=rep1&type=pdf)
+
+[C-Store: A Column-oriented DBMS](http://db.csail.mit.edu/projects/cstore/vldb.pdf)
+
+[MIT Database Systems Open Courseware](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-830-database-systems-fall-2010/readings/)
+
+[Readings in Database Systems](http://www.redbook.io/pdf/redbook-5th-edition.pdf)
+
+[A Relational Model of Data for Large Shared Data Banks](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf)
+* 1969
+* Data independence
+* ordering dependence, indexing dependence, access path dependence
+* primary and foreign keys
+* normalization
+* Relation operations permutation, projection, join, restriction
+* Consistency omission and comission
+
+[The Ubiquitouse B-Tree](http://people.cs.aau.dk/~simas/aalg06/UbiquitBtree.pdf)
+
+[SciDB, Michael Stonebraker](http://www.paradigm4.com/)
+
+[VoltDB, also Michael Stonebraker](https://www.voltdb.com/)
+
 ## Wiki
 
 [Database index](https://en.wikipedia.org/wiki/Database_index)
@@ -87,6 +132,9 @@ I've been pursuing knowledge in the domain of relational theory with a goal of u
 [B+ Trees and why I love them, Part I](https://ayende.com/blog/162945/b-trees-and-why-i-love-them-part-i)
 
 [B+ Trees Visualization](http://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
+
+[How does a relational database work](http://coding-geek.com/how-databases-work/)
+* This does a nice job summarizing concepts at a high level
 
 ## Software
 
