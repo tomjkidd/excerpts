@@ -92,13 +92,11 @@
 (use-package ace-window
   :ensure t
   :init
-  (progn
-    ;; When lots of windows open, use number keys to nav
-    (global-set-key [remap other-window] 'ace-window)
-    (custom-set-faces
-     '(aw-leading-char-face
-       ((t (:inherit ace-jump-face-foreground :height 2.0)))))
-    ))
+  ;; When lots of windows open, use number keys to nav
+  (global-set-key [remap other-window] 'ace-window)
+  (custom-set-faces
+   '(aw-leading-char-face
+     ((t (:inherit ace-jump-face-foreground :height 2.0))))))
 
 ;; ido - interactively do
 (setq ido-enable-flex-matching t)
@@ -120,30 +118,29 @@
 (use-package swiper
   :ensure t
   :config
-  (progn
-    (ivy-mode 1)
-    (setq ivy-wrap t)
-    (setq ivy-height 10)
-    (setq ivy-use-virtual-buffers t)
-    (setq confirm-nonexistent-file-or-buffer t)
-    (setq ivy-extra-directories nil)
-    (setq enable-recursive-minibuffers t)
-    (global-set-key "\C-s" 'swiper)
-    (global-set-key (kbd "C-c C-r") 'ivy-resume)
-    (global-set-key (kbd "<f6>") 'ivy-resume)
-    (global-set-key (kbd "M-x") 'counsel-M-x)
-    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-    (global-set-key (kbd "<f1> f") 'counsel-describe-function)
-    (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-    (global-set-key (kbd "<f1> l") 'counsel-find-library)
-    (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-    (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
-    (global-set-key (kbd "C-c g") 'counsel-git)
-    (global-set-key (kbd "C-c j") 'counsel-git-grep)
-    (global-set-key (kbd "C-c k") 'counsel-ag)
-    (global-set-key (kbd "C-x l") 'counsel-locate)
-    (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
+  (ivy-mode 1)
+  (setq ivy-wrap t)
+  (setq ivy-height 10)
+  (setq ivy-use-virtual-buffers t)
+  (setq confirm-nonexistent-file-or-buffer t)
+  (setq ivy-extra-directories nil)
+  (setq enable-recursive-minibuffers t)
+  (global-set-key "\C-s" 'swiper)
+  (global-set-key (kbd "C-c C-r") 'ivy-resume)
+  (global-set-key (kbd "<f6>") 'ivy-resume)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+  (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+  (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+  (global-set-key (kbd "<f1> l") 'counsel-find-library)
+  (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+  (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+  (global-set-key (kbd "C-c g") 'counsel-git)
+  (global-set-key (kbd "C-c j") 'counsel-git-grep)
+  (global-set-key (kbd "C-c k") 'counsel-ag)
+  (global-set-key (kbd "C-x l") 'counsel-locate)
+  (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+  (define-key read-expression-map (kbd "C-r") 'counsel-expression-history))
 
 (use-package avy
   :ensure t
@@ -155,12 +152,11 @@
 (use-package auto-complete
   :ensure t
   :init
-  (progn
-    ;; Will do auto-complete based on words already in the buffer
-    ;; M-n and M-p move through auto-complete options
-    ;; C-i and C-m to move through and select
-    (ac-config-default)
-    (global-auto-complete-mode t)))
+  ;; Will do auto-complete based on words already in the buffer
+  ;; M-n and M-p move through auto-complete options
+  ;; C-i and C-m to move through and select
+  (ac-config-default)
+  (global-auto-complete-mode t))
 
 ;; To use org-mode to condense a large config file...
 ;; In org mode type <s-<Tab> and add a emacs-lisp line, then put list in the
@@ -277,11 +273,10 @@
 (use-package magit
   :ensure t
   :config
-  (progn
-    ;; The following keybinding brings you to a git status window
-    ;; From there s/u can be used to state/unstage
-    ;; l can be used to show log
-    ;; c can be used to commit
-    ;; d can be used to diff
-    ;; h can be used to create branches
-    (global-set-key (kbd "C-x g") 'magit-status)))
+  ;; The following keybinding brings you to a git status window
+  ;; From there s/u can be used to state/unstage
+  ;; l can be used to show log
+  ;; c can be used to commit
+  ;; d can be used to diff
+  ;; h can be used to create branches
+  (global-set-key (kbd "C-x g") 'magit-status))
